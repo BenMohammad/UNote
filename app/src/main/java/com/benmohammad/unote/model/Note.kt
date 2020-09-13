@@ -34,8 +34,8 @@ class Note(
     var lastUpdated: String? = null
 
     companion object {
-        const val TEXT_TYPE = 1
-        const val TEXT_IMAGE = 2
+        const val TYPE_TEXT = 1
+        const val TYPE_IMAGE = 2
     }
 
 }
