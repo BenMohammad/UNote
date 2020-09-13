@@ -1,8 +1,9 @@
-package com.benmohammad.unote
+package com.benmohammad.unote.activities
 
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.benmohammad.unote.R
 import java.lang.Thread.sleep
 
 class SplashActivity: AppCompatActivity() {

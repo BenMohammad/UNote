@@ -38,4 +38,6 @@ class Note(
         const val TYPE_IMAGE = 2
     }
 
+
+
 }
