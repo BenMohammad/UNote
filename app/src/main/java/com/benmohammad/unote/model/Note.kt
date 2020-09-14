@@ -18,8 +18,8 @@ class Note(
     @ColumnInfo(name = "fileName")
     var fileName: String? = null
 
-    @ColumnInfo(name = "url")
-    var url: String? = null
+    @ColumnInfo(name = "uri")
+    var uri: String? = null
 
     @ColumnInfo(name = "title")
     var title: String? = null

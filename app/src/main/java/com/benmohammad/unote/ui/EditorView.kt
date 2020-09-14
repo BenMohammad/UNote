@@ -3,7 +3,6 @@ package com.benmohammad.unote.ui
 import android.content.Context
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
-import android.media.MediaSession2Service
 import android.net.Uri
 import android.util.AttributeSet
 import android.view.Gravity
@@ -18,11 +17,10 @@ import com.benmohammad.unote.model.MediaMetaData
 import com.benmohammad.unote.model.Note
 import com.bumptech.glide.Glide
 import java.io.File
-import kotlin.math.abs
 
 class EditorView: FrameLayout {
 
-    private lateinit var mContext: Context
+    private var mContext: Context
     lateinit var ll: LinearLayout
     val etList = arrayListOf<AppCompatEditText>()
     val imgList = arrayListOf<AppCompatImageView>()
@@ -84,7 +82,7 @@ class EditorView: FrameLayout {
         imageView.setImageBitmap(bitmap)
     }
 
-    private fun addBitmap(uri: Uri, bitmap: Bitmap, extension: String, shouldUpdateNoteList: Boolean = true) {
+    public fun addBitmap(uri: Uri, bitmap: Bitmap, extension: String, shouldUpdateNoteList: Boolean = true) {
         val imageView = AppCompatImageView(context)
         imageView.layoutParams = LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT)
         imageView.adjustViewBounds = false
@@ -108,7 +106,7 @@ class EditorView: FrameLayout {
         val index = ll.childCount
         val note = Note(index, Note.TYPE_IMAGE)
         uriList.add(MediaMetaData(uri, extension))
-        note.url = uri.toString()
+        note.uri = uri.toString()
         if(shouldUpdateNoteList) {
             notesList.add(note)
 

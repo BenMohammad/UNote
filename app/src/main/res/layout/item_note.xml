@@ -9,6 +9,7 @@
         android:id="@+id/tv_title"
         android:padding="30dp"
         tools:text="Hello"
+        android:textColor="@color/colorPrimaryDark"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
     <View
